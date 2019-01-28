@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Hotel_Reservation_Program
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int standartRoom  = 20;
+            int luxuryRoom = 35;
+            int apartment = 60;
+            Console.WriteLine("Receptionist: Hello sir, do you wish to make a reservation for a room(yes, yeah)");
+            Console.Write("Customer: ");
+            string answer1 = Console.ReadLine();
+            if (answer1 == "yes" || answer1 == "yeah")
+            {
+                Console.WriteLine("What do you want (standart room, luxury room, apartment)");
+                Console.Write("Customer: ");
+                string answer2 = Console.ReadLine();
+                if (answer2 == "standart room")
+                {
+                    Console.WriteLine("The standart room is 20$ per day. For how much days you want to stay?");
+                    Console.Write("Customer: ");
+                    int days1 = int.Parse(Console.ReadLine());
+                    Console.WriteLine($"Receptionist: Ok your price is {standartRoom * days1}$");
+                }
+                else if (answer2 == "luxury room")
+                {
+                    Console.WriteLine("The luxury room is 35$ per day. For how much days you want to stay?");
+                    Console.Write("Customer: ");
+                    int days1 = int.Parse(Console.ReadLine());
+                    Console.WriteLine($"Receptionist: Ok your price is {luxuryRoom * days1}$");
+                }
+                else if (answer2 == "apartment")
+                {
+                    Console.WriteLine("The apartment is 60$ per day. For how much days you want to stay?");
+                    Console.Write("Customer: ");
+                    int days1 = int.Parse(Console.ReadLine());
+                    Console.Write($"Receptionist: Ok your price is {apartment * days1}$");
+                }
+            }
+        }
+    }
+}
